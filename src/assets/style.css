@@ -67,6 +67,18 @@ nav a{
   font-weight: 500;
   color: var(--text-p);
   padding: 0 15px;
+
+}
+
+nav a:hover{
+  transition: color 2s;
+  color: var(--text-options);
+}
+
+nav .active{
+  transition: color 2s;
+  color: var(--text-title);
+  font-weight: 700;
 }
 
 /*===JUMBOTRON===*/
