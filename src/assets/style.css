@@ -11,7 +11,7 @@
 *{
   margin: 0;
   padding: 0;
-  border: 0;
+  box-sizing: border-box;
 }
 
 a{
@@ -23,22 +23,23 @@ body{
   font-weight: 400;
   color: var(--text-p);
   font-size: 1rem;
+  
 }
 
 h3,h4,h5{
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-weight: 500;
   color: var(--text-title);
 }
 
 h4, h5{
-  margin-bottom: 18px;
+  margin-bottom: 1.12rem;
 }
-
 h6{
   font-size: 1.12rem;
-  margin-bottom: 5px;
+  line-height: 1.8rem;
+  font-weight: 500;
   color: var(--text-title);
 }
 
@@ -50,8 +51,8 @@ h6{
 header{
   display: flex;
   flex-direction: row;
-  padding: 20px 0;
-  margin-bottom: 20px;
+  padding: 1.25rem 0;
+  margin-bottom: 1.25rem;
 }
 
 #text-logo{
@@ -60,12 +61,12 @@ header{
 }
 
 header nav{
-  margin-left: 100px;
+  margin-left: 6rem;
   display: inline;
 }
 
 nav a{
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-weight: 500;
   color: var(--text-p);
   padding: 0 15px;
@@ -86,25 +87,25 @@ nav .active{
 p{
   font-size: 1.12rem;
   line-height: 1.75rem;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
   text-justify: auto;
 }
 
 /*===JUMBOTRON===*/
 .jumbotron{
   background-color: var(--background-jb);
-  border-radius: 30px;
+  border-radius: 1.87rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  padding: 40px 60px 0px 60px;
-  margin-bottom: 48px;
+  padding: 2.5rem 3.75rem 0px 3.75rem;
+  margin-bottom: 3rem;
 }
 
 .jumbotron img{
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .description{
@@ -117,14 +118,14 @@ p{
 .description h3{
   font-size: 2rem;
   line-height: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .cards{
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px
+  gap: 1.25rem
 }
 
 .card img{
@@ -136,17 +137,74 @@ p{
 .card p{
   color: var(--text-secondary);
   font-size: 0.88rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 footer{
   bottom: 0;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 2.5rem;
+  padding: 1.25rem;
 
   text-align: center;
   color: var(--text-options);
   background-color: var(--background-footer);
+}
+
+/*=== MODAL=====*/
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 44%;
+  height: 64%;
+  /*unidade vh = visão da altura
+  o legal de usar o vh é que ele se adapta ao tamanho da altura */
+  margin: 16vh auto;
+  position: relative;
+  border-radius: 16px;
+
+  padding: 1.87rem;
+  text-align: center;
+}
+
+.modal-content{
+  height: 100%;
+}
+
+.modal-content img{
+  width: 100%;
+  height: 60%;
+  border-radius: 15px;
+  margin-bottom: 0.6rem;
+}
+
+.modal-content p{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.close{
+  color: var(--text-options);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+
+
+/*=== MODAL.ACTIVE=====*/
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 
