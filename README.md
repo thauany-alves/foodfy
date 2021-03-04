@@ -4,7 +4,7 @@
 
 ### Objetivo
 
-Construir um site completo para uma empresa de receitas chamada Foodfy.
+Construir um site completo para de receitas chamada Foodfy.
 
 ### Página inicial
 
@@ -19,5 +19,5 @@ Construir um site completo para uma empresa de receitas chamada Foodfy.
 
 ### Instruções e materiais 
 
-As instruções e materiais necessários estão em um repositório da Rocketseat [Acesse o Desafio Foodfy](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md)
+As instruções e materiais necessários estão em um repositório da Rocketseat, [Acesse o material para Desafio Foodfy aqui](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md)
 
