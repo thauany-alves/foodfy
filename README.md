@@ -19,7 +19,7 @@ Construir um site completo para de receitas chamada Foodfy.
 
 ### Página de receitas
 <div align="center">
-  <img src="./public/images/receitas-detalhes.png" />
+  <img src="./public/images/receita-detalhes.png" />
 </div>
 
 ### Instruções e materiais 
