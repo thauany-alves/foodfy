@@ -14,12 +14,15 @@
 
   <h4>Mais acessadas</h4>
   <div class="cards">
-    <div class="card">
-      <img src="images/burger.png" alt="Recipe">
-      <h6>Triplo bacon burger</h6>
-      <p>por Jorge Relato</p>
-    </div>
-    <div class="card">
+    {% for recipe in items %}
+      <div class="card" id="{{recipe.title}}">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+        <h6>{{recipe.title}}</h6>
+        <p>por {{recipe.author}}</p>
+      </div>
+    {% endfor %}
+    
+    {# <div class="card">
       <img src="images/pizza.png" alt="Recipe">
       <h6>Pizza 4 estações</h6>
       <p>por Fabiana Melo</p>
@@ -43,8 +46,9 @@
       <img src="images/asinhas.png" alt="Recipe">
       <h6>Asinhas de frango ao barbecue</h6>
       <p>por Vania Steroski</p>
-    </div>
+    </div> #}
   </div>
+  <script src="scripts.js"></script>
 {% endblock %}}
   
 

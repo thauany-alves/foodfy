@@ -2,47 +2,25 @@
 
 {% block header %}
   <header>
-    <h3 id="text-logo">Foodfy</h3>
+    <h3 id="text-logo"><a href="/">Foodfy</a></h3>
     <nav>
-      <a href="about" class="" target="_blank">Sobre</a>
-      <a href="recipes" class="active" target="_blank">Receitas</a>
+      <a href="about" class="" >Sobre</a>
+      <a href="recipes" class="active" >Receitas</a>
     </nav>
   </header> 
 {% endblock %}
   
 {% block content %}
-  <div class="cards">      
-    <div class="card" id="doce">
-      <img src="/images/doce.png" alt="Recipe">
-      <h6>Docinhos pão-do-céu</h6>
-      <p>por Ricardo Golvea</p>
-    </div>
-    <div class="card" id="lasanha">
-      <img src="/images/lasanha.png" alt="Recipe">
-      <h6>Lasanha mac n’ cheese</h6>
-      <p>por Juliano Vieira</p>
-    </div>
-    <div class="card" id="asinhas">
-      <img src="/images/asinhas.png" alt="Recipe">
-      <h6>Asinhas de frango ao barbecue</h6>
-      <p>por Vania Steroski</p>
-    </div>
-          <div class="card" id="burger">
-      <img src="/images/burger.png" alt="Recipe">
-      <h6>Triplo bacon burger</h6>
-      <p>por Jorge Relato</p>
-    </div>
-    <div class="card" id="pizza">
-      <img src="/images/pizza.png" alt="Recipe">
-      <h6>Pizza 4 estações</h6>
-      <p>por Fabiana Melo</p>
-    </div>
-    <div class="card" id="espaguete">
-      <img src="/images/espaguete.png" alt="Recipe">
-      <h6>Espaguete ao alho</h6>
-      <p>por Júlia Kinoto</p>
-    </div>
+  <div class="cards"> 
+    {% for recipe in items %}
+      <div class="card" id="{{recipe.title}}">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+        <h6>{{recipe.title}}</h6>
+        <p>por {{recipe.author}}</p>
+      </div>
+    {% endfor %}     
   </div>
+  <script src="scripts.js"></script>
 {% endblock %}
   
 
@@ -56,6 +34,6 @@
       </div>
      
     </div>
-  </div>
+  </div> #}
 
-  <script src="/assets/scripts.js"></script> #}
+  {#  #}

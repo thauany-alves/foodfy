@@ -16,7 +16,7 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function (req, res) {
-  return res.render("index");
+  return res.render("index", { items: recipes });
 });
 
 server.get("/about", function (req, res) {
@@ -24,8 +24,26 @@ server.get("/about", function (req, res) {
 });
 
 server.get("/recipes", function (req, res) {
-  return res.render("recipes");
+  return res.render("recipes", { items: recipes });
 });
+
+server.get("/recipe", function (req, res) {
+  const recipeName = req.query.name;
+  console.log('Server '+ recipeName);
+
+  const index = recipes.findIndex(recipe => recipe.title == recipeName);
+
+  return res.render('recipe', {recipe: recipes[index]});
+});
+
+
+//   console.log(recipes[recipeIndex]);
+
+//   if (!recipes[recipeIndex]) {
+//     return res.send("Recipe not found");
+//   }
+//   return res.render("recipe", recipes[recipeIndex]);
+// })
 
 server.listen(3000, function () {
   console.log('server is runing');

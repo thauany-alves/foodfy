@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+  <header>
+    <h3 id="text-logo"><a href="/">Foodfy</a></h3>
+    <nav>
+      <a href="about" class="" >Sobre</a>
+      <a href="recipes" class="active" >Receitas</a>
+    </nav>
+  </header> 
+{% endblock %}
+
+{% block content %}
+  <div class="image">
+    <img src="{{recipe.image}}" alt="">
+    <h2>{{recipe.title}}</h2>
+    <p>por {{recipe.author}}</p>
+  </div>
+
+  <div id="ingredients" class="section-detail ingredients">
+    <h5>Ingredientes <span>Esconder</span></h5> 
+    <ul>
+      {% for item in recipe.ingredients %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div id="preparation" class="section-detail preparation">
+    <h5>Modo de preparo <span>Mostrar</span></h5>
+    <ul class="toogle">
+      {% for item in recipe.preparation %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div id="more" class="section-detail more">
+    <h5>Informações Adicionais <span>Mostrar</span></h5>
+    <p class="toogle">{{recipe.information}}</p>
+  </div>
+  <script src="toogle.js"></script>
+{% endblock %}
