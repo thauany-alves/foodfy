@@ -6,20 +6,14 @@
 
 Construir um site completo para de receitas chamada Foodfy.
 
-### Página inicial
-
-<div align="center">
-  <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/mockup.png" />
-</div> 
-
 ### Página de receitas
 <div align="center">
-  <img src="./public/images/Pagina_receitas.png" />
+  <img src="./public/images/Pagina_receitas.png" width="200px" />
 </div>
 
-### Página de receitas
+### Receita completa
 <div align="center">
-  <img src="./public/images/receita-detalhes.png" />
+  <img src="./public/images/receita-detalhes.png" width="200px" />
 </div>
 
 ### Instruções e materiais 
